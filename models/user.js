@@ -1,13 +1,13 @@
 const mongoose = require('mongoose');
 
 const UserSchema = new mongoose.Schema({
-  name: { type: String, default: '' },
+  password: { type: String, default: '' },
   email: { type: String, default: '' },
   username: { type: String, default: '' }
 });
 
 // Validations
-UserSchema.path('name').required(true, 'Name is required.');
+UserSchema.path('password').required(true, 'Password is required.');
 UserSchema.path('email').required(true, 'Email is required.');
 UserSchema.path('username').required(true, 'Username is required.');
 
